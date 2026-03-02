@@ -74,17 +74,19 @@ export default function WebDevProjectPage() {
               {/* DASHBOARD IMAGES: Ensure files are moved to the root /public folder */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-[#1a120b] p-2 border-2 border-[#b85c38] shadow-xl group overflow-hidden">
+                  {/* Updated path includes repository name */}
                   <img 
-                    src="/1.png" 
-                    alt="Security Overview" 
+                    src="/new/1.png"
+                    alt="Security Overview"
                     className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                   <p className="text-[9px] text-[#e5d3b3] mt-2 text-center uppercase tracking-[0.4em] opacity-50 font-mono">Real-time Fraud Monitoring Dashboard</p>
                 </div>
                 <div className="bg-[#1a120b] p-2 border-2 border-[#b85c38] shadow-xl group overflow-hidden">
-                  <img 
-                    src="/2.png" 
-                    alt="Recent Transactions" 
+                  {/* Updated path includes repository name */}
+                  <img
+                    src="/new/2.png"
+                    alt="Recent Transactions"
                     className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                   <p className="text-[9px] text-[#e5d3b3] mt-2 text-center uppercase tracking-[0.4em] opacity-50 font-mono">Transaction Risk Scoring Feed</p>
