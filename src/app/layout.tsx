@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 
 // 2. Update Metadata to match the brand
 export const metadata: Metadata = {
-  title: "Outlaw Code | Digital Bounty Hunters",
+  title: "NOTHING | Digital Bounty Hunters",
   description: "Wrangling AI & Web Solutions for the modern frontier.",
 };
 

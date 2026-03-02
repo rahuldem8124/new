@@ -62,7 +62,7 @@ export default function Services() {
                 {/* Wanted Header */}
                 <div className="text-center border-b-2 border-black/20 pb-4 mb-6">
                   <h3 className="text-3xl font-black text-black uppercase tracking-tight">SERVICE</h3>
-                  <p className="text-[9px] font-bold tracking-[0.3em] text-black/60 uppercase">Outlaw Code Specialized</p>
+                  <p className="text-[9px] font-bold tracking-[0.3em] text-black/60 uppercase">NOTHING Specialized</p>
                 </div>
 
                 {/* Icon Area (Acts as the "Photo") */}

@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link"; // Added Link for navigation
 import Preloader from "@/components/Preloader";
 import Hero from "@/components/hero/Hero";
 import Services from "@/components/services/Services";
-import Team from "@/components/team/Team";
 import Contact from "@/components/Contact";
 
 const AmbientAtmosphere = () => {
@@ -45,7 +45,6 @@ export default function Home() {
     if (isVisited) {
       setLoading(false);
     } else {
-      // Small timeout to allow Preloader to finish its animation
       const timer = setTimeout(() => setLoading(false), 4500); 
       return () => clearTimeout(timer);
     }
@@ -62,14 +61,34 @@ export default function Home() {
         <div className="relative z-10">
           <Hero />
           
-          {/* Mexican Pattern Divider (Serape Style) */}
+          {/* Mexican Pattern Divider */}
           <div className="h-6 w-full bg-gradient-to-r from-[#e74c3c] via-[#f1c40f] via-[#2ecc71] via-[#3498db] to-[#9b59b6] opacity-40 shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]" />
           
           <Services />
           
-          {/* Transition to Wood Plank Background for Team */}
-          <div className="bg-[#3d2b1f] border-t-8 border-[#2b1d15]">
-            <Team />
+          {/* New CTA Section to go to the Team Page */}
+          <div className="bg-[#3d2b1f] border-t-8 border-[#2b1d15] py-24 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto px-4"
+            >
+              <h2 className="text-[#e5d3b3] font-serif text-4xl md:text-5xl mb-6 uppercase tracking-[0.2em]">
+                Meet The Posse
+              </h2>
+              <p className="text-[#b85c38] font-mono text-sm mb-10 tracking-widest uppercase">
+                The finest minds in the frontier intelligence agency
+              </p>
+              
+              <Link 
+                href="/members" 
+                className="inline-block group relative px-10 py-4 bg-transparent border-2 border-[#b85c38] text-[#e5d3b3] font-bold uppercase tracking-widest overflow-hidden transition-all duration-300 hover:text-[#3d2b1f]"
+              >
+                <span className="relative z-10">Enter the Office</span>
+                <div className="absolute inset-0 bg-[#b85c38] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              </Link>
+            </motion.div>
           </div>
 
           <Contact />
@@ -82,7 +101,7 @@ export default function Home() {
               <span className="text-2xl">💀</span>
           </div>
           <p className="text-[#e5d3b3] text-xs uppercase tracking-[1.5em] font-serif">
-            STOP • OUTLAW CODE • STOP
+            STOP • NOTHING • STOP
           </p>
           <p className="text-[#b85c38] text-[10px] uppercase mt-4 tracking-widest font-bold">
             Frontier Intelligence Agency
